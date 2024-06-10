@@ -35,3 +35,17 @@ static decimal ExtractRemainder(decimal avarageScore)
     };
 }
 
+static decimal GetUserScore()
+{
+    string userInput = Console.ReadLine();
+
+    try
+    {
+        return Convert.ToDecimal(userInput);
+    }
+    catch (FormatException formatException)
+    {
+        Console.WriteLine("The score you inserted was invalid.");
+        return 0;
+    }
+}
