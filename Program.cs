@@ -37,7 +37,7 @@ static void Print(string message)
 
 static void PrintLine(string message)
 {
-    Console.Write($"{message}");
+    Console.WriteLine($"{message}");
 }
 
 static string IeltsLevelName(decimal score)
