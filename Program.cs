@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 PrintLine("Welcome to IELTS score Calculator");
 
@@ -13,6 +14,21 @@ decimal writingScore = GetUserScore();
 
 Print("Reading Score: ");
 decimal readinScore = GetUserScore();
+
+decimal[] score = {
+    speakingScore,
+    listeningScore,
+    writingScore,
+    readinScore
+};
+
+decimal avarageScore = score.Average();
+int baseScore = (int)avarageScore;
+decimal remainder = ExtractRemainder(avarageScore);
+
+avarageScore = baseScore + remainder;
+string LevelName = IeltsLevelName(avarageScore);
+PrintLine($"Your overall: {avarageScore}\n Your category: {LevelName}");
 
 static void Print(string message)
 {
