@@ -1,5 +1,19 @@
 ﻿using System;
 
+PrintLine("Welcome to IELTS score Calculator");
+
+Print("Speaking Score: ");
+decimal speakingScore = GetUserScore();
+
+Print("Listening Score: ");
+decimal listeningScore = GetUserScore();
+
+Print("Writing Score: ");
+decimal writingScore = GetUserScore();
+
+Print("Reading Score: ");
+decimal readinScore = GetUserScore();
+
 static void Print(string message)
 {
     Console.Write($"{message}");
