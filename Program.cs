@@ -22,3 +22,16 @@ static string IeltsLevelName(decimal score)
         _ => "Incompetent"
     };
 }
+
+static decimal ExtractRemainder(decimal avarageScore)
+{
+    decimal rawRemainder = avarageScore - (int)avarageScore;
+
+    return rawRemainder switch
+    {
+        < 0.25m => 0,
+        < 0.75m => 0.5m,
+        _ => 1,
+    };
+}
+
