@@ -28,7 +28,7 @@ decimal remainder = ExtractRemainder(avarageScore);
 
 avarageScore = baseScore + remainder;
 string LevelName = IeltsLevelName(avarageScore);
-PrintLine($"Your overall: {avarageScore}\n Your category: {LevelName}");
+PrintLine($"Your overall: {avarageScore}\nYour category: {LevelName}");
 
 static void Print(string message)
 {
